@@ -1,5 +1,4 @@
 class DogTestDrive {
-	
 	public static void main(String[] args) {
 		Dog dogOne = new Dog();
 		dogOne.size = 70;
