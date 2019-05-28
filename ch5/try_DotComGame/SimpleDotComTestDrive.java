@@ -1,6 +1,5 @@
 class SimpleDotComTestDrive {
 
-	
 	public static void main(String[] args) {
 		SimpleDot dot = new SimpleDot();
 		String testResult = "false";

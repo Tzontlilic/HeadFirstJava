@@ -1,11 +1,12 @@
 public class SimpleDotCom {
 	
-	int[] locationCells;
-	int numOfHits = 0;
+	private int[] locationCells;
+	private int numOfHits = 0;
 
 	public void setLocationCells(int[] locs) {
 		locationCells = locs;	
 	}
+
 
 	public String checkYourself(String stringGuess) {
 		int guess = Integer.parseInt(stringGuess);	
@@ -23,6 +24,6 @@ public class SimpleDotCom {
 			result = "kill";	
 		}
 		System.out.println(result);
-		return result
+		return result;
 	}
 }
