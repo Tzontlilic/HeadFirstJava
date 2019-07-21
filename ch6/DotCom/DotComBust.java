@@ -5,8 +5,9 @@ public class DotComBust {
 	private ArrayList<DotCom> dotComsList = new ArrayList<DotCom>();
 	private int numOfGuesses = 0;
 
-	private void setUpGame() {
-	
+	private void setUpGame() { //初始化游戏
+
+		//创建DotCom对象	
 		DotCom one = new DotCom();
 		one.setName("Pets.com");
 		DotCom two = new DotCom();
@@ -20,18 +21,20 @@ public class DotComBust {
 
 		System.out.println("Your goal is to sink three dot coms");
 		System.out.println("Pets.com, eToys.com, Go2.com");
-		Systm.out.println("Try to sink them all in the fewest number of guesses");
+		System.out.println("Try to sink them all in the fewest number of guesses");
 
+		//依次将DotComList中的对象部署到地图上
 		for (DotCom dotComToSet : dotComsList) {
 
-			ArrayList<String> newLocation = helper.placeDotCom();	
+			ArrayList<String> newLocation = helper.placeDotCom(3);	
 			dotComToSet.setLocation(newLocation);
 		}
+		System.out.println("游戏初始化完毕");
 	}
 
-	private void startPlaying() {
+	private void startPlaying() { //开始游戏
 		
-		while(!dotComeList.isEmpty()) {
+		while(!dotComsList.isEmpty()) {
 			
 			String userGuess = helper.getUserInput("Enter a guess");
 			checkUserGuess(userGuess);
@@ -41,16 +44,18 @@ public class DotComBust {
 
 	private void checkUserGuess(String userGuess) {
 		
-		numOfGuess ++;
+		numOfGuesses ++;
 		String result = "miss";
 		for (DotCom dotComToSet : dotComsList) {
 			
-			result = dotComToTest.checkYouserlf(userGuess);
-			if (result.equals("hit")) {
+			result = dotComToSet.checkYourself(userGuess);
+			if (result.equals("击中")) {
 				break;	
 			}
-			if (result.equals("kill")) {
-				dotComsList.remove(dotComToTest);
+			if (result.equals("击杀")) {
+				dotComsList.remove(dotComToSet);
+				System.out.print( "你击沉了" );
+				dotComToSet.getName();
 				break;
 			}
 		}
@@ -60,18 +65,9 @@ public class DotComBust {
 
 	private void finishGame() {
 		
-		System.out.println("All dotcoms are dead! Your stock is now worthless");
-
-		if (numOfGuess <= 18) {
-			System.out.println("It only took you" + numOfGuess + "guesses.");
-			System.out.println("You got out before you options sank.");
-		}
-		else {
-			System.out.println("Took you long enouth." + numOfGuess + "guesses.");	
-			System.out.println("fish are dancing with your option");
-		}
+		System.out.println("所有的战舰都被击沉。");
+		System.out.println("你用了 " + numOfGuesses + " 次机会");
 	}
-
 	public static void main(String[] args) {
 		
 		DotComBust game = new DotComBust();
