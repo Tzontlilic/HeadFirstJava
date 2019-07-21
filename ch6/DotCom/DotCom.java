@@ -26,7 +26,7 @@ public class DotCom {
 		String result;	
 		result = "miss";
 
-		if (index >= 0) {
+		if (index >= 0) { //如果数组中包含猜数，则认为击中，再判断是否击杀
 			
 			mLocation.remove(index);
 			
@@ -38,11 +38,7 @@ public class DotCom {
 
 				result = "击中";
 			}
-		
 		}
-		
 		return result;
-		
 	}
-
 }
