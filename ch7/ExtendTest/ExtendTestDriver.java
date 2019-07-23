@@ -1,5 +1,11 @@
 public class ExtendTestDriver {
 
+
+	// 覆盖的规则  
+	// 参数必须一样，且返回类型必须要兼容
+	// 不能降低方法的存取权限
+	//
+	//
 	public static void main (String args[]) {
 
 		ExtendTestDriver mTestDriver = new ExtendTestDriver();
