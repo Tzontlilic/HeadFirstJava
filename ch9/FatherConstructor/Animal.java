@@ -1,7 +1,10 @@
-public abstract class Animal {
+public  class Animal {
 
 	private String name;
 
+	public Animal() {
+	
+	}
 	public Animal(String setName) {
 	
 		name = setName;	
