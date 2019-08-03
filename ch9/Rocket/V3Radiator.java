@@ -6,8 +6,7 @@ public class V3Radiator extends V2Radiator {
 		
 		super(lglist);
 		for (int g=0; g<10; g++) {
-		
-			lglist.add(new SimUnit("V3Radiator"));		
+			System.out.println("V3Radiator");	
 		}
 	}
 }

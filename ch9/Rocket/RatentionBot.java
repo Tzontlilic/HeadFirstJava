@@ -3,6 +3,6 @@ public class RatentionBot {
 	
 	RatentionBot(ArrayList rlist) {
 	
-		rlist.add(new SimUnit("RatentionBot"));
+		System.out.println("RatentionBot");
 	}
 }
