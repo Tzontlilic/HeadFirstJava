@@ -4,6 +4,7 @@ import java.awt.event.*;
 public class ListenerGUI implements ActionListener { // 要实现ActionListener接口, 监听到的事件只会通知实现了这个接口的类，这个类要实现监听，所以要实现接口
 
 	JButton mButton; // 这里按钮对象应该是一个实例变量
+	public boolean changeFlag = false; // 用于控制按钮反转
 	public static void main(String args[]) {
 		
 		ListenerGUI mLisennerGUI = new ListenerGUI();
@@ -25,7 +26,16 @@ public class ListenerGUI implements ActionListener { // 要实现ActionListener�
 	}
 
 	public void actionPerformed(ActionEvent event) { // 这是实现接口的方法，必须重写
+		changeFlag = !changeFlag;	
+
+		// 实现按钮反转功能
+		if (changeFlag == true) {
 		
-		mButton.setText("Clicked");
+			mButton.setText("Clicked");
+		}
+		if (changeFlag == false) {
+			
+			mButton.setText("Click");
+		}
 	}
 }
