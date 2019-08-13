@@ -10,6 +10,10 @@ public class MusicTest {
 			System.out.println("we got not a sequencer");	
 			e.printStackTrace(); // 即使无法对异常作出处理，也要print异常
 		}
+		
+		finally {
+			System.out.println("Finally"); // finaly中，不管怎么样都会执行，如果上面有return, 也先执行finally之后才return	
+		}
 
 	}
 
