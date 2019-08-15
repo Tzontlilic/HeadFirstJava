@@ -16,7 +16,16 @@ public class ListenerGUI implements ActionListener { // 要实现ActionListener�
 		JFrame mJf = new JFrame(); // 实例化窗体对象
 		mButton = new JButton("click"); // 实例化按钮对象
 
+
+
+		// 查API文档如下：
+		// public void addActionListener(ActionListener l)
+		// 这个方法的传入参数为ActionListner接口类型，
+		// this表示当前类对象的引用，当前类实现了ActionListener接口
+		// 所以传进去没问题
 		mButton.addActionListener(this); // 注册这个按钮到事件监听
+
+
 
 		mJf.getContentPane().add(mButton); // 把按钮添加到窗体上
 		mJf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,6 +41,7 @@ public class ListenerGUI implements ActionListener { // 要实现ActionListener�
 		if (changeFlag == true) {
 		
 			mButton.setText("Clicked");
+			//mButton.removeActionListener(this); 可以按一次然后使监听失效
 		}
 		if (changeFlag == false) {
 			

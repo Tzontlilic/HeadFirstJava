@@ -5,10 +5,10 @@ public class FirstDraw extends JPanel{ // 继承了JPanel这类,相当于自己�
 	
 	FirstDraw(int colorWidth, int colorLength, int picX, int picY) {
 			
-		mcolorWidth = colorWidth;
-		mcolorLength = colorLength;
-		mpicX = picX;
-		mpicY = picY;
+		this.mcolorWidth = colorWidth;
+		this.mcolorLength = colorLength;
+		this.mpicX = picX;
+		this.mpicY = picY;
 	}
 
 	@Override
