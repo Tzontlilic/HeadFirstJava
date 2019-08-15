@@ -19,7 +19,7 @@ class GameHelper {
 
 	public  ArrayList getRandomNumArray(int num) {
 		ArrayList<Integer> localArray = new ArrayList<Integer>() ;
-		int start = (int)((10 - num) * Math.random());
+		int start = (int)((10 - num) * Math.random()); //生成一个随机数，并且保证这个随机数加2也不会超过0-10这个范围。
 		localArray.add(start);
 		localArray.add(start + 1);
 		localArray.add(start + 2);

@@ -54,7 +54,6 @@ public class GameHelper {
 			success = true;
 
 			while(success && x < comSize) {
-			
 
 				if(grid[location] == 0 ) {
 					

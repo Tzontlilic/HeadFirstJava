@@ -1,5 +1,5 @@
 public class ObjectTestDriver {
-	
+			
 	public static void  main(String args[]) {
 
 		// 这个测试的目的是，了解万类之源Object
@@ -34,7 +34,6 @@ public class ObjectTestDriver {
 			System.out.println("Son != son2");
 		}
 		// ********** END **********************//
-		
 
 		// ********* hashCode() 方法试水 *******//
 

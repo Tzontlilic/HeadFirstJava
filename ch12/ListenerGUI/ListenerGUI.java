@@ -39,3 +39,5 @@ public class ListenerGUI implements ActionListener { // 要实现ActionListener�
 		}
 	}
 }
+		// 总结
+		// 按钮监听的步骤：实例化窗口 -> 实例化按钮 -> 按钮添加至监听 -> 按钮部署到窗口
