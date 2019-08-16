@@ -18,7 +18,7 @@ public class move {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		myDraw mD = new myDraw();
-		frame.getContentPane().add(mD);
+		frame.setContentPane(mD);
 		frame.setSize(400, 400);
 		frame.setVisible(true);
 
